@@ -18,7 +18,10 @@ class _chatPageState extends State<chatPage> {
         child: const Icon(Icons.chat),
       ),
       body: ListView(
-        children: [chatCard()],
+        children: const [
+          chatCard(),
+          chatCard(),
+        ],
       ),
     );
   }
