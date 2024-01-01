@@ -12,13 +12,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Chit Chat',
       theme: ThemeData(
         fontFamily: "OpenSans",
-        primaryColor: const Color(0xFF075E54),
+        primaryColor: Colors.purple,
         scaffoldBackgroundColor: Colors.white,
         appBarTheme: const AppBarTheme(
-            color: Color(0xFF075E54),
+            color: Colors.purple,
             titleTextStyle: TextStyle(color: Colors.white, fontSize: 28),
             actionsIconTheme: IconThemeData(color: Colors.white)),
         colorScheme: ColorScheme.fromSwatch().copyWith(

@@ -1,3 +1,4 @@
+import 'package:chit_chat/Custom%20UI/Models/chat_model.dart';
 import 'package:chit_chat/Custom%20UI/chat_card.dart';
 import 'package:flutter/material.dart';
 
@@ -9,6 +10,16 @@ class chatPage extends StatefulWidget {
 }
 
 class _chatPageState extends State<chatPage> {
+  List<ChatModel> chats = [
+    ChatModel(
+        name: "Parag Gupta",
+        image: "",
+        isGroup: false,
+        time: "3:00",
+        currentMessage: "Hello Parag",
+        status: "Aur meri jaan",
+        id: 1)
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,11 +28,13 @@ class _chatPageState extends State<chatPage> {
         backgroundColor: Theme.of(context).primaryColor,
         child: const Icon(Icons.chat),
       ),
-      body: ListView(
-        children: const [
-          chatCard(),
-          chatCard(),
-        ],
+      body: ListView.builder(
+        itemCount: chats.length,
+        itemBuilder: (context, index) {
+          return chatCard(
+            chatModel: chats[index],
+          );
+        },
       ),
     );
   }

@@ -19,10 +19,19 @@ class _HomeScreenState extends State<HomeScreen>
   }
 
   @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Chit Chat"),
+        title: const Text(
+          "Chit Chat",
+          style: TextStyle(fontFamily: "OpenSans", fontSize: 28),
+        ),
         actions: [
           IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
           PopupMenuButton(
@@ -54,7 +63,9 @@ class _HomeScreenState extends State<HomeScreen>
           indicatorWeight: 5,
           indicatorSize: TabBarIndicatorSize.tab,
           labelColor: Colors.white,
-          unselectedLabelColor: Colors.grey,
+          unselectedLabelColor: Colors.white70,
+          labelStyle: const TextStyle(fontWeight: FontWeight.w500),
+          unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.w400),
           controller: _controller,
           tabs: const [
             Tab(
