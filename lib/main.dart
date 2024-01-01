@@ -1,4 +1,4 @@
-import 'package:chit_chat/home_screen.dart';
+import 'package:chit_chat/Screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Chit Chat',
       theme: ThemeData(
+        fontFamily: "OpenSans",
         primaryColor: const Color(0xFF075E54),
         scaffoldBackgroundColor: Colors.white,
         appBarTheme: const AppBarTheme(
@@ -22,8 +23,6 @@ class MyApp extends StatelessWidget {
             actionsIconTheme: IconThemeData(color: Colors.white)),
         colorScheme: ColorScheme.fromSwatch().copyWith(
           primary: const Color(0xFF128C7E),
-
-          // secondary: const,
         ),
       ),
       home: const HomeScreen(),

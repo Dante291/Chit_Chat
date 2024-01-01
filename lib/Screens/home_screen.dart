@@ -1,3 +1,4 @@
+import 'package:chit_chat/Pages/chat_page.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -24,10 +25,33 @@ class _HomeScreenState extends State<HomeScreen>
         title: const Text("Chit Chat"),
         actions: [
           IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
-          IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert))
+          PopupMenuButton(
+            onSelected: (value) {},
+            itemBuilder: (context) {
+              return [
+                const PopupMenuItem(
+                  value: "New Group",
+                  child: Text("New Group"),
+                ),
+                const PopupMenuItem(
+                  value: "New Broadccast",
+                  child: Text("New Broadcast"),
+                ),
+                const PopupMenuItem(
+                  value: "Starred MEassges",
+                  child: Text("Starred Meassges"),
+                ),
+                const PopupMenuItem(
+                  value: "Settings",
+                  child: Text("Settings"),
+                ),
+              ];
+            },
+          )
         ],
         bottom: TabBar(
           indicatorColor: Colors.white,
+          indicatorWeight: 5,
           indicatorSize: TabBarIndicatorSize.tab,
           labelColor: Colors.white,
           unselectedLabelColor: Colors.grey,
@@ -52,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen>
         controller: _controller,
         children: const [
           Text('Camera'),
-          Text('Camera'),
+          chatPage(),
           Text('Camera'),
           Text('Camera'),
         ],
