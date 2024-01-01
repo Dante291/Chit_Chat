@@ -13,7 +13,8 @@ class _chatPageState extends State<chatPage> {
   List<ChatModel> chats = [
     ChatModel(
         name: "Parag Gupta",
-        image: "",
+        image:
+            "https://th.bing.com/th/id/OIP.Ofsl01obPBUMm8rmGUDHSQAAAA?rs=1&pid=ImgDetMain",
         isGroup: false,
         time: "3:00",
         currentMessage: "Hello Parag",
