@@ -16,7 +16,7 @@ class _IndividualChatScreenState extends State<IndividualChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 237, 180, 247),
+      backgroundColor: Colors.red.shade100,
       appBar: AppBar(
         titleSpacing: 0,
         leadingWidth: 70,

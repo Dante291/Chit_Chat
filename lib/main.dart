@@ -16,10 +16,10 @@ class MyApp extends StatelessWidget {
       title: 'Chit Chat',
       theme: ThemeData(
         fontFamily: "OpenSans",
-        primaryColor: Colors.purple,
+        primaryColor: Colors.blueGrey,
         scaffoldBackgroundColor: Colors.white,
         appBarTheme: const AppBarTheme(
-            color: Colors.purple,
+            color: Colors.grey,
             titleTextStyle: TextStyle(color: Colors.white, fontSize: 28),
             actionsIconTheme: IconThemeData(color: Colors.white)),
         colorScheme: ColorScheme.fromSwatch().copyWith(
